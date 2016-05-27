@@ -1,0 +1,102 @@
+<div class="row">
+
+<div class="col-md-8">
+
+<h2>Transactions</h2>
+<p>
+<form action="/" method="get" style="display:inline">
+<%= select_month(@month, field_name: "month") %>
+<%= select_year(@year, field_name: "year") %>
+<input type="hidden" name="edit" value="<%=@edit%>">
+<input type="hidden" name="all" value="<%=@all%>">
+<input type="submit" value="Go">
+</form>
+
+<%= link_to "Update Import", importer_path %>
+|
+<% if @edit %>
+<%= link_to "Standard Mode", root_path(:all => @all, :edit => false,
+:month => @month.to_s,
+:year => @year.to_s) %>
+<% else %>
+<%= link_to "Edit Mode", root_path(:all => @all, :edit => true,
+:month => @month.to_s,
+:year => @year.to_s) %>
+<% end %>
+|
+<% if @all %>
+<%= link_to "Filter Uncategorized", root_path(:all => false, :edit => @edit,
+:month => @month.to_s,
+:year => @year.to_s) %>
+<% else %>
+<%= link_to "Unfilter", root_path(:all => true, :edit => @edit,
+:month => @month.to_s,
+:year => @year.to_s) %>
+<% end %>
+
+
+</p>
+
+<table class="table table-striped">
+<tr>
+<th>Tx Time</th>
+<th>Payee</th>
+<th>Memo</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Balance</th>
+</tr>
+<tbody>
+<% @transactions.each do |tx| %>
+<% if @all == true || (@all == false and tx.tags.count == 0) %>
+<tr>
+<td><%= tx.transaction_time.strftime("%a %b %-d, %Y") %></td>
+<td><%= tx.payee.titlecase %></td>
+<td><%= tx.memo.titlecase %></td>
+<td><%= tx.type.titlecase %></td>
+<td><%= number_to_currency(tx.amount.to_f / 100, :unit => "$") %></td>
+<td><%= number_to_currency(tx.balance.to_f / 100, :unit => "$") %></td>
+</tr>
+<% if @edit %>
+<tr>
+<td colspan="6">
+<%= form_tag("/home/tag", remote: true) do %>
+<% @tags.each do |t| %>
+<label class="checkbox-inline" for="tags_<%=tx.id%>_<%=t.id %>">
+<%= check_box_tag "tags[#{tx.id}][#{t.id}]", true, tx.tags.include?(t) %> <%= t.tag_name %>
+</label>
+<% end %>
+<div class="pull-right">
+<%= hidden_field_tag "tx", tx.id %>
+<%= submit_tag "Save" %>
+</div>
+<% end %>
+</td>
+</tr>
+<% end %>
+<% end %>
+<% end %>
+</tbody>
+
+</table>
+</div>
+
+<div class="col-md-4">
+
+<h3>Tags</h3>
+<table class = "table">
+<% @tags.each do |t| %>
+<tr>
+<td><%= t.tag_name %></td>
+<td><%= number_to_currency(t.spend_for(@month, @year).to_f / 100, :unit => "$") %></td>
+<td><a href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+<tr>
+<% end %>
+</table>
+
+<%= form_for :tag, url: {action:"create_tag"}, html: {class: "nifty_form"} do |f| %>
+<%= f.text_field :tag_name %> <%= f.submit "Save" %>
+<% end %>
+
+</div>
+</div>

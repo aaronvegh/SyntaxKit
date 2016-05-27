@@ -64,6 +64,9 @@
 		21F28DDB1B7AC7F8009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDA1B7AC7F8009DD1E9 /* X.framework */; };
 		21F28DDD1B7AC802009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDC1B7AC802009DD1E9 /* X.framework */; };
 		21F28DDF1B7AC80B009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDE1B7AC80B009DD1E9 /* X.framework */; };
+		932036101CF791F80088BF71 /* view.rb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9320360F1CF791F80088BF71 /* view.rb.txt */; };
+		932036131CF793F20088BF71 /* RubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320360D1CF791690088BF71 /* RubyTests.swift */; };
+		932036141CF793F30088BF71 /* RubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320360D1CF791690088BF71 /* RubyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +141,8 @@
 		21F28DDA1B7AC7F8009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/iOS/X.framework; sourceTree = "<group>"; };
 		21F28DDC1B7AC802009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/Mac/X.framework; sourceTree = "<group>"; };
 		21F28DDE1B7AC80B009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/watchOS/X.framework; sourceTree = "<group>"; };
+		9320360D1CF791690088BF71 /* RubyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RubyTests.swift; sourceTree = "<group>"; };
+		9320360F1CF791F80088BF71 /* view.rb.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = view.rb.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +208,7 @@
 				210299D01B2E8924009C61EE /* AttributedParserTests.swift */,
 				210299CF1B2E8924009C61EE /* LanguageTests.swift */,
 				2119898A1B2EBA2C00F0D786 /* ThemeTests.swift */,
+				9320360D1CF791690088BF71 /* RubyTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				210BF26C1B37C04E008AA4F0 /* test.rb.txt */,
 				2119897E1B2EAF0900F0D786 /* Tomorrow.tmTheme */,
 				2119897F1B2EAF0900F0D786 /* YAML.tmLanguage */,
+				9320360F1CF791F80088BF71 /* view.rb.txt */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932036101CF791F80088BF71 /* view.rb.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +551,7 @@
 				211989CE1B2EC40C00F0D786 /* LanguageTests.swift in Sources */,
 				211989CB1B2EC40C00F0D786 /* TestHelper.swift in Sources */,
 				211989CD1B2EC40C00F0D786 /* AttributedParserTests.swift in Sources */,
+				932036141CF793F30088BF71 /* RubyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +580,7 @@
 				210299DF1B2E892E009C61EE /* AttributedParserTests.swift in Sources */,
 				210299DE1B2E892E009C61EE /* LanguageTests.swift in Sources */,
 				2119898B1B2EBA2C00F0D786 /* ThemeTests.swift in Sources */,
+				932036131CF793F20088BF71 /* RubyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
