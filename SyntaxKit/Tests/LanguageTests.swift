@@ -15,7 +15,6 @@ class LanguageTests: XCTestCase {
 
 	let yaml = language("YAML")
 
-
 	// MARK: - Tests
 
 	func testLoading() {

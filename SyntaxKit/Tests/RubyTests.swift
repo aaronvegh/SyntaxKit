@@ -8,63 +8,50 @@
 
 import XCTest
 @testable import SyntaxKit
+import X
 
 class RubyTests: XCTestCase {
 
     // MARK: - Properties
 
-    let parser = Parser(language: language("Ruby"))
-
     func testRubyParsing() {
-        let input = fixture("view.rb", "txt")
-        parser.parse(input) { scope, range in
-            print("Scope: \(scope), String: \(input.substringWithRange(range))")
+
+        let input = fixture("Swift", "txt")
+
+        let swift = language("Swift")
+
+        for pattern in swift.patterns {
+            print(pattern.description)
         }
-    }
 
+        let tomorrow = theme("Tomorrow")
 
-    // MARK: - Tests
+        let attributedParser = AttributedParser(language: swift!, theme: tomorrow!)
 
-    func testParsingBeginEnd() {
-        var stringQuoted: NSRange?
-        var punctuationBegin: NSRange?
-        var punctuationEnd: NSRange?
-
-        parser.parse("title: \"Hello World\"\n") { scope, range in
-            if stringQuoted == nil && scope.hasPrefix("string.quoted.double") {
-                stringQuoted = range
-            }
-
-            if punctuationBegin == nil && scope.hasPrefix("punctuation.definition.string.begin") {
-                punctuationBegin = range
-            }
-
-            if punctuationEnd == nil && scope.hasPrefix("punctuation.definition.string.end") {
-                punctuationEnd = range
+        var changes = [[String: AnyObject]]()
+        attributedParser.parse(input) { (scope: String, range: NSRange, attributes: Attributes?) in
+            if let attr = attributes {
+                changes.append(["scope": scope, "range": range, "attributes": attr])
             }
         }
 
-        XCTAssertEqual(NSMakeRange(7, 13), stringQuoted!)
-        XCTAssertEqual(NSMakeRange(7, 1), punctuationBegin!)
-        XCTAssertEqual(NSMakeRange(19, 1), punctuationEnd!)
-    }
-
-    func testParsingBeginEndCrap() {
-        var stringQuoted: NSRange?
-
-        parser.parse("title: Hello World\ncomments: 24\nposts: \"12\"zz\n") { scope, range in
-            if stringQuoted == nil && scope.hasPrefix("string.quoted.double") {
-                stringQuoted = range
-            }
+        let outputString = NSMutableString(string: input)
+        for change in changes.reverse() {
+            guard let attrs = change["attributes"] as? [String: AnyObject],
+                      color = attrs["NSColor"] as? Color,
+                      range = change["range"] as? NSRange else { return }
+            guard let hexString = Color.hexStringFromColor(color) else { return }
+            let openTag = "<span style=\"color:" + String(hexString) + "\">"
+            let closeTag = "</span>"
+            outputString.insertString(closeTag, atIndex: range.location + range.length)
+            outputString.insertString(openTag, atIndex: range.location)
         }
-        
-        XCTAssertEqual(NSMakeRange(39, 4), stringQuoted!)
-    }
-    
-    func testRuby() {
-        let parser = Parser(language: language("Ruby"))
-        let input = fixture("test.rb", "txt")
-        parser.parse(input, match: { _, _ in return })
+
+        let immutableString = "<html><body style=\"background-color:#000\"><div style='color:#fff'>" + String(outputString) + "</div></body></html>"
+        let finalString = NSMutableString(string: immutableString)
+
+        finalString.replaceOccurrencesOfString("\n", withString: "<br/>", options: NSStringCompareOptions(rawValue: 0), range: NSRange(location: 0, length: outputString.length))
+
+        print(finalString)
     }
 }
-

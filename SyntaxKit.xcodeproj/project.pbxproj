@@ -11,8 +11,6 @@
 		210299DF1B2E892E009C61EE /* AttributedParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210299D01B2E8924009C61EE /* AttributedParserTests.swift */; };
 		210BF26D1B37C04E008AA4F0 /* test.rb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 210BF26C1B37C04E008AA4F0 /* test.rb.txt */; };
 		210BF26E1B37C04E008AA4F0 /* test.rb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 210BF26C1B37C04E008AA4F0 /* test.rb.txt */; };
-		210BF2701B37C0A2008AA4F0 /* Ruby.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 210BF26F1B37C0A2008AA4F0 /* Ruby.tmLanguage */; };
-		210BF2711B37C0A2008AA4F0 /* Ruby.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 210BF26F1B37C0A2008AA4F0 /* Ruby.tmLanguage */; };
 		211989801B2EAF0900F0D786 /* Tomorrow.tmTheme in Resources */ = {isa = PBXBuildFile; fileRef = 2119897E1B2EAF0900F0D786 /* Tomorrow.tmTheme */; };
 		211989811B2EAF0900F0D786 /* YAML.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 2119897F1B2EAF0900F0D786 /* YAML.tmLanguage */; };
 		211989841B2EB18600F0D786 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211989821B2EB18000F0D786 /* TestHelper.swift */; };
@@ -67,6 +65,16 @@
 		932036101CF791F80088BF71 /* view.rb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9320360F1CF791F80088BF71 /* view.rb.txt */; };
 		932036131CF793F20088BF71 /* RubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320360D1CF791690088BF71 /* RubyTests.swift */; };
 		932036141CF793F30088BF71 /* RubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320360D1CF791690088BF71 /* RubyTests.swift */; };
+		93F4BDB21CF90CD40035E58D /* view.rb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9320360F1CF791F80088BF71 /* view.rb.txt */; };
+		93F4BDB31CF90CD70035E58D /* view.rb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9320360F1CF791F80088BF71 /* view.rb.txt */; };
+		93F4BDB51CF90E730035E58D /* Swift.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 93F4BDB41CF90E730035E58D /* Swift.tmLanguage */; };
+		93F4BDB61CF90E730035E58D /* Swift.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 93F4BDB41CF90E730035E58D /* Swift.tmLanguage */; };
+		93F4BDB81CF90FA10035E58D /* Swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93F4BDB71CF90FA10035E58D /* Swift.txt */; };
+		93F4BDB91CF90FA10035E58D /* Swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93F4BDB71CF90FA10035E58D /* Swift.txt */; };
+		93F4BDBB1CF913470035E58D /* Ruby.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 93F4BDBA1CF913470035E58D /* Ruby.tmLanguage */; };
+		93F4BDBC1CF9F1A70035E58D /* Ruby.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 93F4BDBA1CF913470035E58D /* Ruby.tmLanguage */; };
+		93F4BDC11CF9FA920035E58D /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4BDC01CF9FA920035E58D /* Color+Hex.swift */; };
+		93F4BDC21CF9FA920035E58D /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4BDC01CF9FA920035E58D /* Color+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +125,6 @@
 		210299D01B2E8924009C61EE /* AttributedParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedParserTests.swift; sourceTree = "<group>"; };
 		210299E41B2E8AFC009C61EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		210BF26C1B37C04E008AA4F0 /* test.rb.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.rb.txt; sourceTree = "<group>"; };
-		210BF26F1B37C0A2008AA4F0 /* Ruby.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Ruby.tmLanguage; sourceTree = "<group>"; };
 		2119897E1B2EAF0900F0D786 /* Tomorrow.tmTheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tomorrow.tmTheme; sourceTree = "<group>"; };
 		2119897F1B2EAF0900F0D786 /* YAML.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = YAML.tmLanguage; sourceTree = "<group>"; };
 		211989821B2EB18000F0D786 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
@@ -143,6 +150,10 @@
 		21F28DDE1B7AC80B009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/watchOS/X.framework; sourceTree = "<group>"; };
 		9320360D1CF791690088BF71 /* RubyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RubyTests.swift; sourceTree = "<group>"; };
 		9320360F1CF791F80088BF71 /* view.rb.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = view.rb.txt; sourceTree = "<group>"; };
+		93F4BDB41CF90E730035E58D /* Swift.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Swift.tmLanguage; sourceTree = "<group>"; };
+		93F4BDB71CF90FA10035E58D /* Swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Swift.txt; sourceTree = "<group>"; };
+		93F4BDBA1CF913470035E58D /* Ruby.tmLanguage */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Ruby.tmLanguage; path = ../../../../Ruby.tmLanguage; sourceTree = "<group>"; };
+		93F4BDC01CF9FA920035E58D /* Color+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Hex.swift"; path = "Resources/Color+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				210299E11B2E8AFC009C61EE /* Resources */,
+				93F4BDC01CF9FA920035E58D /* Color+Hex.swift */,
 				211989821B2EB18000F0D786 /* TestHelper.swift */,
 				211989881B2EB8D400F0D786 /* ParserTests.swift */,
 				210299D01B2E8924009C61EE /* AttributedParserTests.swift */,
@@ -225,11 +237,13 @@
 		210299E21B2E8AFC009C61EE /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				210BF26F1B37C0A2008AA4F0 /* Ruby.tmLanguage */,
+				93F4BDBA1CF913470035E58D /* Ruby.tmLanguage */,
+				93F4BDB41CF90E730035E58D /* Swift.tmLanguage */,
 				210BF26C1B37C04E008AA4F0 /* test.rb.txt */,
 				2119897E1B2EAF0900F0D786 /* Tomorrow.tmTheme */,
 				2119897F1B2EAF0900F0D786 /* YAML.tmLanguage */,
 				9320360F1CF791F80088BF71 /* view.rb.txt */,
+				93F4BDB71CF90FA10035E58D /* Swift.txt */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -490,9 +504,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210BF2711B37C0A2008AA4F0 /* Ruby.tmLanguage in Resources */,
 				211989C91B2EC40900F0D786 /* Tomorrow.tmTheme in Resources */,
+				93F4BDBC1CF9F1A70035E58D /* Ruby.tmLanguage in Resources */,
 				210BF26E1B37C04E008AA4F0 /* test.rb.txt in Resources */,
+				93F4BDB21CF90CD40035E58D /* view.rb.txt in Resources */,
+				93F4BDB91CF90FA10035E58D /* Swift.txt in Resources */,
+				93F4BDB61CF90E730035E58D /* Swift.tmLanguage in Resources */,
 				211989CA1B2EC40900F0D786 /* YAML.tmLanguage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,9 +526,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210BF2701B37C0A2008AA4F0 /* Ruby.tmLanguage in Resources */,
+				93F4BDBB1CF913470035E58D /* Ruby.tmLanguage in Resources */,
 				211989801B2EAF0900F0D786 /* Tomorrow.tmTheme in Resources */,
 				210BF26D1B37C04E008AA4F0 /* test.rb.txt in Resources */,
+				93F4BDB31CF90CD70035E58D /* view.rb.txt in Resources */,
+				93F4BDB81CF90FA10035E58D /* Swift.txt in Resources */,
+				93F4BDB51CF90E730035E58D /* Swift.tmLanguage in Resources */,
 				211989811B2EAF0900F0D786 /* YAML.tmLanguage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F4BDC21CF9FA920035E58D /* Color+Hex.swift in Sources */,
 				211989CF1B2EC40C00F0D786 /* ThemeTests.swift in Sources */,
 				211989CC1B2EC40C00F0D786 /* ParserTests.swift in Sources */,
 				211989CE1B2EC40C00F0D786 /* LanguageTests.swift in Sources */,
@@ -575,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F4BDC11CF9FA920035E58D /* Color+Hex.swift in Sources */,
 				211989841B2EB18600F0D786 /* TestHelper.swift in Sources */,
 				211989891B2EB8D400F0D786 /* ParserTests.swift in Sources */,
 				210299DF1B2E892E009C61EE /* AttributedParserTests.swift in Sources */,

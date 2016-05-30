@@ -30,6 +30,11 @@ final class Pattern {
 		return patterns
 	}
 
+    var description: String? {
+        guard let name = self.name, match = self.match else { return nil }
+        return name
+    }
+
 	// MARK: - Initializers
 
 	init?(dictionary: [NSObject: AnyObject], parent: Pattern? = nil) {
@@ -67,4 +72,6 @@ final class Pattern {
 		}
 		self.patterns = patterns
 	}
+
+
 }
